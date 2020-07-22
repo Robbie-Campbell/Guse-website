@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("/assets/img/background.jpg");
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.welcome-text{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#intro{
+    color: #EEEEEE;
+    font-size: 90px;
+    opacity: 1;
+    animation: fader 0.5s ease-in-out 0.5s infinite alternate;
+}
+
+.logo{
+    opacity: 0;
+    position: absolute;
+    transition: opacity 1s;
+    max-width: 20vw;
+}
+
+.launch-home{
+    margin-top: 4vh;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.5s ease-in 1s;
+    font-size: 30px;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.showLogo{
+    opacity: 1;
+    position: relative;
+    display: inline-block;
+    pointer-events: all;
+}
+
+
+@keyframes fader{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
