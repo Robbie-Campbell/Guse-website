@@ -27,6 +27,7 @@ function nextWord(){
     index++;
 }
 
+// 2 functions to be called when the continue button is pressed
 function hideGoose(){
     logo.classList.remove("showLogo");
     launchHomepage.classList.remove("showLogo");
@@ -36,8 +37,8 @@ function showNav(){
 }
 // Add a goose sound effect when the href is clicked
 launchHomepage.addEventListener("click", ()=>{
-    //let honk = new Audio("/assets/sounds/honk.mp3");
-    //honk.play();
+    let honk = new Audio("/assets/sounds/honk.mp3");
+    honk.play();
     hideGoose();
     showNav();
 })
