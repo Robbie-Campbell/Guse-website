@@ -1,7 +1,8 @@
 // Define the variables for the introduction
 const welcomeText = document.getElementById("intro");
 const logo = document.querySelector(".logo");
-const launchHomepage = document.querySelector(".launch-home")
+const launchHomepage = document.querySelector(".launch-home");
+const homePage = document.querySelector(".home");
 let introText = ["Welcome", "to","the", "future"];
 let index = 0;
 
@@ -26,10 +27,21 @@ function nextWord(){
     index++;
 }
 
+function hideGoose(){
+    logo.classList.remove("showLogo");
+    launchHomepage.classList.remove("showLogo");
+}
+function showNav(){
+    homePage.classList.add("showLogo");
+}
 // Add a goose sound effect when the href is clicked
 launchHomepage.addEventListener("click", ()=>{
-    let honk = new Audio("/assets/sounds/honk.mp3");
-    honk.play();
+    //let honk = new Audio("/assets/sounds/honk.mp3");
+    //honk.play();
+    hideGoose();
+    showNav();
 })
 
 nextWord();
+
+
