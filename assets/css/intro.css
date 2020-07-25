@@ -50,7 +50,7 @@ body{
     opacity: 0;
     position: absolute;
     left: 50%;
-    top: 70%;
+    top: 80%;
     transform: translate(-50%, -50%);
     transition: opacity 0.5s ease-in 1s;
     font-size: 30px;
@@ -59,7 +59,7 @@ body{
 }
 
 /* reveal the logo and link text */
-.showLogo{
+.reveal{
     opacity: 1;
     display: inline-block;
     pointer-events: all;
