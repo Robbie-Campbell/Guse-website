@@ -1,0 +1,57 @@
+.mission_statement{
+    margin-top: 8vh;
+    display: flex;
+    max-width: 80vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding:30px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+}
+
+#image_array{
+    max-width: 40vw;
+    max-height: 40vh;
+    opacity: 1;
+    padding:10px;
+    background: rgba(100, 100, 100, 0.8);
+    margin: 10px;
+    border: 1px solid black;
+    animation: crossfade 5s ease-in-out infinite 1s;
+    
+}
+
+.our_mission{
+    margin: auto;
+    max-width: 40vw;
+    background: rgb(240,240,240);
+    padding: 5px;
+    border: 1px solid black;
+}
+
+@keyframes crossfade{
+    0%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    72%{
+        opacity:0;
+    }
+    78%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.lessons{
+    border-bottom: 1px solid black;
+    margin:10px;
+    max-width: 50vw;
+}
