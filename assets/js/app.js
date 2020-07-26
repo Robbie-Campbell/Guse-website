@@ -41,28 +41,22 @@ function showNav(){
 
     // Create an image array for the front page
     let imageArray = [
-        "/assets/img/language_array/python.jpg",
-        "/assets/img/language_array/java.jpg",
-        "/assets/img/language_array/javascript.jpg"
+        { image: "/assets/img/language_array/python.jpg", text: "Python" },
+        { image: "/assets/img/language_array/java.jpg", text: "Java" },
+        { image: "/assets/img/language_array/javascript.jpg", text: "Javascript" },
+        { image: "/assets/img/language_array/php.png", text: "PHP" },
     ];
-
-    let lesson_name = [
-        "Python",
-        "Java",
-        "Javascript"
-    ];
-
     const htmlImage = document.getElementById("image_array");
     let current = 0;
-    htmlImage.src = imageArray[0];
+    htmlImage.src = imageArray[0].image;
     let loop_images = setInterval(loopThrough, 5000);
     function loopThrough(){
         current++
         if (current == imageArray.length){
             current = 0;
         }
-        htmlImage.src = imageArray[current];
-        document.querySelector(".lessons").textContent = `You could learn: ${lesson_name[current]}`;
+        htmlImage.src = imageArray[current].image;
+        document.querySelector(".lessons").textContent = `You could learn: ${imageArray[current].text}`;
     }
 }
 // Add a goose sound effect when the href is clicked
